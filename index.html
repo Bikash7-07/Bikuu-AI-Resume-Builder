@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bikuu AI - Resume Builder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">✦ Bikuu <span>AI</span></div>
+
+        <nav>
+            <a href="#templates">Templates</a>
+            <a href="#builder">Resume Builder</a>
+            <button onclick="toggleChat()">🤖 Bikuu AI</button>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <div class="badge">
+                ✨ AI-POWERED RESUME BUILDER
+            </div>
+
+            <h1>
+                Build a resume<br>
+                <span>that gets noticed.</span>
+            </h1>
+
+            <p>
+                Create a professional, ATS-friendly resume with
+                Bikuu AI. Choose a template, add your details,
+                and build your resume in minutes.
+            </p>
+
+            <div class="buttons">
+                <button class="primary" onclick="scrollToBuilder()">
+                    Create My Resume →
+                </button>
+
+                <button class="secondary" onclick="scrollToTemplates()">
+                    View Templates
+                </button>
+            </div>
+
+            <div class="features">
+                <span>✓ Free to start</span>
+                <span>✓ AI assistance</span>
+                <span>✓ PDF export</span>
+            </div>
+
+        </div>
+
+
+        <div class="hero-preview">
+
+            <div class="floating-card card-one">
+                🤖 <strong>Bikuu AI</strong>
+                <small>Improving your resume...</small>
+            </div>
+
+            <div class="resume-paper">
+
+                <div class="resume-top">
+                    <div class="avatar">JD</div>
+
+                    <div>
+                        <strong>JOHN DOE</strong>
+                        <small>Software Developer</small>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h5>PROFILE</h5>
+                <div class="line"></div>
+                <div class="line short"></div>
+
+                <h5>EXPERIENCE</h5>
+                <div class="line"></div>
+                <div class="line"></div>
+
+                <h5>SKILLS</h5>
+                <div class="skill-line"></div>
+
+            </div>
+
+            <div class="floating-card card-two">
+                ⭐ <strong>ATS Ready</strong>
+                <small>Resume optimized</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEMPLATES -->
+    <section id="templates" class="section">
+
+        <div class="section-title">
+            <span>CHOOSE YOUR STYLE</span>
+            <h2>Professional Templates</h2>
+            <p>
+                Pick a design that matches your personality and career.
+            </p>
+        </div>
+
+
+        <div class="templates">
+
+            <div class="template-card">
+
+                <div class="template modern">
+                    <h3>JOHN DOE</h3>
+                    <small>SOFTWARE DEVELOPER</small>
+
+                    <hr>
+
+                    <h5>PROFILE</h5>
+                    <div class="line"></div>
+                    <div class="line short"></div>
+
+                    <h5>EXPERIENCE</h5>
+                    <div class="line"></div>
+                    <div class="line short"></div>
+
+                    <h5>SKILLS</h5>
+                    <div class="line"></div>
+                </div>
+
+                <div class="template-bottom">
+                    <div>
+                        <strong>Modern</strong>
+                        <small>Clean & professional</small>
+                    </div>
+
+                    <button onclick="chooseTemplate('Modern')">
+                        Use
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="template-card">
+
+                <div class="template classic">
+                    <h3>JOHN DOE</h3>
+                    <small>BUSINESS ANALYST</small>
+
+                    <h5>PROFILE</h5>
+                    <div class="line"></div>
+                    <div class="line short"></div>
+
+                    <h5>EXPERIENCE</h5>
+                    <div class="line"></div>
+
+                    <h5>EDUCATION</h5>
+                    <div class="line"></div>
+
+                </div>
+
+                <div class="template-bottom">
+                    <div>
+                        <strong>Classic</strong>
+                        <small>Traditional & elegant</small>
+                    </div>
+
+                    <button onclick="chooseTemplate('Classic')">
+                        Use
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="template-card">
+
+                <div class="template minimal">
+                    <h3>JOHN DOE</h3>
+                    <small>UI/UX DESIGNER</small>
+
+                    <h5>ABOUT</h5>
+                    <div class="line"></div>
+
+                    <h5>EXPERIENCE</h5>
+                    <div class="line"></div>
+                    <div class="line short"></div>
+
+                    <h5>EDUCATION</h5>
+                    <div class="line"></div>
+
+                </div>
+
+                <div class="template-bottom">
+                    <div>
+                        <strong>Minimal</strong>
+                        <small>Simple & clean</small>
+                    </div>
+
+                    <button onclick="chooseTemplate('Minimal')">
+                        Use
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="template-card">
+
+                <div class="template student">
+                    <h3>JOHN DOE</h3>
+                    <small>STUDENT</small>
+
+                    <h5>EDUCATION</h5>
+                    <div class="line"></div>
+                    <div class="line"></div>
+
+                    <h5>PROJECTS</h5>
+                    <div class="line"></div>
+                    <div class="line short"></div>
+
+                    <h5>SKILLS</h5>
+                    <div class="line"></div>
+                </div>
+
+                <div class="template-bottom">
+                    <div>
+                        <strong>Student</strong>
+                        <small>Perfect for freshers</small>
+                    </div>
+
+                    <button onclick="chooseTemplate('Student')">
+                        Use
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="template-card">
+
+                <div class="template creative">
+                    <h3>JOHN DOE</h3>
+                    <small>CREATIVE PROFESSIONAL</small>
+
+                    <h5>ABOUT ME</h5>
+                    <div class="line"></div>
+                    <div class="line"></div>
+
+                    <h5>WORK</h5>
+                    <div class="line"></div>
+
+                    <h5>SKILLS</h5>
+                    <div class="line"></div>
+                </div>
+
+                <div class="template-bottom">
+                    <div>
+                        <strong>Creative</strong>
+                        <small>Stand out visually</small>
+                    </div>
+
+                    <button onclick="chooseTemplate('Creative')">
+                        Use
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BUILDER -->
+    <section id="builder" class="builder-section">
+
+        <div class="section-title">
+            <span>BUILD YOUR RESUME</span>
+            <h2>Tell us about yourself</h2>
+            <p>Your resume updates automatically.</p>
+        </div>
+
+
+        <div class="builder">
+
+            <!-- FORM -->
+            <div class="form-box">
+
+                <div class="form-heading">
+                    <h3>Your Information</h3>
+                    <strong id="progress">0% Complete</strong>
+                </div>
+
+
+                <label>
+                    Full Name
+                    <input id="name" placeholder="John Doe">
+                </label>
+
+
+                <label>
+                    Professional Title
+                    <input id="job" placeholder="Software Developer">
+                </label>
+
+
+                <div class="two-inputs">
+
+                    <label>
+                        Email
+                        <input id="email" placeholder="john@gmail.com">
+                    </label>
+
+                    <label>
+                        Phone
+                        <input id="phone" placeholder="+91 9876543210">
+                    </label>
+
+                </div>
+
+
+                <label>
+                    Location
+                    <input id="location" placeholder="Odisha, India">
+                </label>
+
+
+                <label>
+                    Professional Summary
+                    <textarea id="summary"
+                        placeholder="Tell employers about yourself..."></textarea>
+                </label>
+
+
+                <label>
+                    Education
+                    <textarea id="education"
+                        placeholder="B.Tech CSE - XYZ University - 2026"></textarea>
+                </label>
+
+
+                <label>
+                    Skills
+                    <textarea id="skills"
+                        placeholder="JavaScript, Python, Git, SQL..."></textarea>
+                </label>
+
+
+                <label>
+                    Projects
+                    <textarea id="projects"
+                        placeholder="Describe your projects..."></textarea>
+                </label>
+
+
+                <label>
+                    Experience
+                    <textarea id="experience"
+                        placeholder="Describe your experience..."></textarea>
+                </label>
+
+
+                <button class="ai-button" onclick="openAI()">
+                    ✨ Improve My Resume with Bikuu AI
+                </button>
+
+
+                <button class="download-button" onclick="window.print()">
+                    📥 Download / Save as PDF
+                </button>
+
+            </div>
+
+
+            <!-- LIVE PREVIEW -->
+            <div class="preview-box">
+
+                <div class="preview-heading">
+                    <span>Live Preview</span>
+                    <strong id="selectedTemplate">
+                        Modern Template
+                    </strong>
+                </div>
+
+
+                <div class="real-resume">
+
+                    <div class="resume-header">
+
+                        <h1 id="previewName">
+                            Your Name
+                        </h1>
+
+                        <h3 id="previewJob">
+                            Your Professional Title
+                        </h3>
+
+                        <p>
+                            <span id="previewEmail">
+                                email@example.com
+                            </span>
+                            •
+                            <span id="previewPhone">
+                                Phone
+                            </span>
+                            •
+                            <span id="previewLocation">
+                                Location
+                            </span>
+                        </p>
+
+                    </div>
+
+
+                    <div class="resume-section">
+                        <h4>PROFILE</h4>
+                        <p id="previewSummary">
+                            Your professional summary will appear here.
+                        </p>
+                    </div>
+
+
+                    <div class="resume-section">
+                        <h4>EDUCATION</h4>
+                        <p id="previewEducation">
+                            Your education will appear here.
+                        </p>
+                    </div>
+
+
+                    <div class="resume-section">
+                        <h4>SKILLS</h4>
+                        <p id="previewSkills">
+                            Your skills will appear here.
+                        </p>
+                    </div>
+
+
+                    <div class="resume-section">
+                        <h4>PROJECTS</h4>
+                        <p id="previewProjects">
+                            Your projects will appear here.
+                        </p>
+                    </div>
+
+
+                    <div class="resume-section">
+                        <h4>EXPERIENCE</h4>
+                        <p id="previewExperience">
+                            Your experience will appear here.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact">
+
+        <div>
+            <span>NEED HELP?</span>
+
+            <h2>
+                Having trouble with Bikuu AI?
+            </h2>
+
+            <p>
+                If you face any problem while creating your resume,
+                contact the developer through LinkedIn.
+            </p>
+        </div>
+
+        <a
+            href="https://www.linkedin.com/in/bikash-raghab-69a38b2b0/"
+            target="_blank">
+
+            Connect on LinkedIn →
+
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        ✦ Bikuu AI
+
+        <small>
+            AI-powered resume building made simple.
+        </small>
+    </footer>
+
+
+    <!-- CHATBOT -->
+    <div id="chatbot" class="chatbot">
+
+        <div class="chat-header">
+
+            <div>
+                <strong>🤖 Bikuu AI</strong>
+                <small>Resume Assistant</small>
+            </div>
+
+            <button onclick="toggleChat()">×</button>
+
+        </div>
+
+
+        <div id="messages" class="messages">
+
+            <div class="message bot">
+                👋 Hi! I'm <strong>Bikuu AI</strong>.
+                Ask me about your resume, skills, projects or summary.
+            </div>
+
+        </div>
+
+
+        <div class="quick-buttons">
+
+            <button onclick="quickMessage('Improve my resume')">
+                Improve
+            </button>
+
+            <button onclick="quickMessage('Suggest skills')">
+                Skills
+            </button>
+
+            <button onclick="quickMessage('Write a summary')">
+                Summary
+            </button>
+
+        </div>
+
+
+        <div class="chat-input">
+
+            <input
+                id="chatInput"
+                placeholder="Ask Bikuu AI..."
+                onkeydown="if(event.key==='Enter') sendMessage()">
+
+            <button onclick="sendMessage()">
+                ➤
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button class="chat-button" onclick="toggleChat()">
+        🤖
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
